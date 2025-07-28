@@ -1,4 +1,3 @@
-import './css/styles.css';
 import { getImagesByQuery } from './js/pixabay-api.js';
 import { createGallery, clearGallery, showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton } from './js/render-functions.js';
 import iziToast from 'izitoast';
