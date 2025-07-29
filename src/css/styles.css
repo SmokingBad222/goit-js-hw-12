@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 32px;
+
 }
 
 .form input[type="text"] {
@@ -117,11 +117,11 @@ body {
 }
 
 .load-more {
+  background-color: #4e75ff;
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #555;
   color: white;
   border: none;
   border-radius: 6px;

@@ -10,6 +10,7 @@ const loadMoreBtn = document.querySelector('.load-more');
 let query = '';
 let page = 1;
 let totalHits = 0;
+const PER_PAGE = 15;// ADD THIS
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -25,14 +26,17 @@ form.addEventListener('submit', async (e) => {
 });
 
 loadMoreBtn.addEventListener('click', async () => {
+  hideLoadMoreButton();
   page++;
   await fetchImages();
 });
 
+
 async function fetchImages() {
   try {
     showLoader();
-    const data = await getImagesByQuery(query, page);
+
+    const data = await getImagesByQuery(query, page,);
     totalHits = data.totalHits;
 
     if (data.hits.length === 0 && page === 1) {
@@ -43,7 +47,8 @@ async function fetchImages() {
 
     createGallery(data.hits);
 
-    if (page * 15 >= totalHits) {
+            // CHANGE THIS
+    if (page * PER_PAGE >= totalHits) {
       hideLoadMoreButton();
       iziToast.info({ message: "We're sorry, but you've reached the end of search results." });
     } else {
