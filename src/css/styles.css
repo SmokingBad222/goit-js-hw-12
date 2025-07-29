@@ -115,7 +115,7 @@ body {
 .info p {
   margin: 0;
 }
-
+/* load more */
 .load-more {
   background-color: #4e75ff;
   display: block;
