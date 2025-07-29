@@ -33,9 +33,7 @@ export function hideLoader() {
   loader.classList.remove('is-visible');
 }
 
-export function showLoadMoreButton() {
-  console.log("show button");
-  
+export function showLoadMoreButton() {  
   loadMoreBtn.classList.remove('is-hidden');
 }
 
