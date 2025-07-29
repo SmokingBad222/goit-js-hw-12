@@ -34,10 +34,12 @@ export function hideLoader() {
 }
 
 export function showLoadMoreButton() {
-  loadMoreBtn.classList.add('is-visible');
+  console.log("show button");
+  
+  loadMoreBtn.classList.remove('is-hidden');
 }
 
 export function hideLoadMoreButton() {
-  loadMoreBtn.classList.remove('is-visible');
+  loadMoreBtn.classList.add('is-hidden');
 }
 

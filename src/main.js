@@ -10,7 +10,7 @@ const loadMoreBtn = document.querySelector('.load-more');
 let query = '';
 let page = 1;
 let totalHits = 0;
-const PER_PAGE = 15;// ADD THIS
+const PER_PAGE = 8;// ADD THIS
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -51,7 +51,7 @@ async function fetchImages() {
     if (page * PER_PAGE >= totalHits) {
       hideLoadMoreButton();
       iziToast.info({ message: "We're sorry, but you've reached the end of search results." });
-    } else {
+    } else {    
       showLoadMoreButton();
     }
 
