@@ -1,4 +1,4 @@
-import { getImagesByQuery } from './js/pixabay-api.js';
+import { getImagesByQuery, PER_PAGE } from './js/pixabay-api.js';
 import { createGallery, clearGallery, showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton } from './js/render-functions.js';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
@@ -10,7 +10,6 @@ const loadMoreBtn = document.querySelector('.load-more');
 let query = '';
 let page = 1;
 let totalHits = 0;
-const PER_PAGE = 8;// ADD THIS
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
